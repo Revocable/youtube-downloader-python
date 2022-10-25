@@ -32,7 +32,7 @@ def downloaderplaylist():
                 print(f"Progress:  {str(percentage(playlist.index(videos),len(playlist)))[0:3]}% ")
 
     else:
-        print("Please select an option")
+        print("Please select a valid option")
 
 
     print(f"Downloading the palylist: {playlist.title}")
@@ -59,6 +59,9 @@ def downloadervideo():
             name, ext = os.path.splitext(output)
             new_file = name + ".mp3"
             os.rename(output, new_file)
+
+    else:
+        print("Please select a valid option!")
 
    
     print("Download finished!")
